@@ -1,0 +1,70 @@
+```markdown
+# How to Create a Shell Script in Linux
+
+## Introduction
+A shell script is a file containing a series of commands that the shell can execute. Shell scripts are useful for automating repetitive tasks.
+
+## Steps to Create a Shell Script
+
+### 1. Login and Open Terminal
+Login to your Linux machine and open the terminal.
+
+### 2. Navigate to Desired Directory
+Navigate to the folder where you want to store the shell script.
+
+### 3. Create the Shell Script File
+Create a new file with a `.sh` extension.
+```sh
+touch script.sh
+```
+
+### 4. Make the Script Executable
+By default, the script file is not executable. Change its permissions.
+```sh
+chmod +x script.sh
+```
+
+### 5. Add Commands to the Script
+Open the script file with a text editor and add your commands. For example, using `nano`:
+```sh
+nano script.sh
+```
+Add the following commands:
+```sh
+echo "This is my first shell script"
+touch testfile
+ls
+echo "End of my shell script"
+```
+
+### 6. Save and Run the Script
+Save the changes and run the script.
+```sh
+./script.sh
+```
+
+## Comments in Shell Script
+Any line starting with `#` is treated as a comment and ignored during execution.
+```sh
+# This is a comment
+echo "Testing comments in shell script"
+```
+
+## Variables in Shell Script
+Shell scripts support variables. There are two types:
+- **System-defined variables**: Generally capitalized.
+- **User-defined variables**: Set by the user and exist only during script execution.
+```sh
+# Accessing an Environment Variable
+echo $USER
+
+# Creating and accessing User-defined Variable
+variable_name="GeeksforGeeks"
+echo $variable_name
+```
+
+## Specifying the Shell Interpreter
+Specify the shell interpreter at the top of the script using the shebang line.
+```sh
+#!/bin/bash
+```
